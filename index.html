@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="container">
+    <div class="jumbotron">
+        <div class=" row col col-lg-12 justify-content-center">
+        <h1 class="display-5">CÁLCULO DE CORES</h1>
+        </div>
+        <div class=" row col col-lg-12 justify-content-center">
+            <div class="borda red">
+            <h3>RED</h3><span id="input_R-1">125</span><br>
+            <input type="range" max="255" min="0" id="range_R-1" value="125" step="1" oninput="showValR1(this.value)" onchange="showValR1(this.value)">
+            </div>
+            <div class="borda green">
+            <h3>GREEN</h3><span id="input_G-1">125</span><br>
+            <input type="range" max="255" min="0" id="range_G-1" value="125" step="1" oninput="showValG1(this.value)" onchange="showValG1(this.value)">
+            </div>
+            <div class="borda blue">
+            <h3>BLUE</h3><span id="input_B-1">125</span><br>
+            <input type="range" max="255" min="0" id="range_B-1" value="125" step="1" oninput="showValB1(this.value)" onchange="showValB1(this.value)">
+            </div>
+          
+        </div>
+    </div>
+
+
+
+</div>
+
+<body style="background-color: #7D7D7D">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <script>
+        
+        var r, g, b;
+            r = document.getElementById("input_R-1").innerHTML;
+            g = document.getElementById("input_G-1").innerHTML;
+            b = document.getElementById("input_B-1").innerHTML;
+            
+        
+        function showValR1(newVal) {
+            document.getElementById("input_R-1").innerHTML = newVal;
+            r = document.getElementById("input_R-1").innerHTML;
+            document.body.style.backgroundColor = ("rgb("+r+","+g+","+b+")");
+        }
+          function showValG1(newVal) {
+            document.getElementById("input_G-1").innerHTML = newVal;
+            g = document.getElementById("input_G-1").innerHTML;
+            document.body.style.backgroundColor = ("rgb("+r+","+g+","+b+")");
+        }
+          function showValB1(newVal) {
+            document.getElementById("input_B-1").innerHTML = newVal;
+            b = document.getElementById("input_B-1").innerHTML;
+            document.body.style.backgroundColor = ("rgb("+r+","+g+","+b+")");
+        }
+        
+            
+    
+        
+
+    </script>
+</body>
+
+</html>
